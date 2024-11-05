@@ -8,7 +8,7 @@ on:
 permissions: { }
 jobs:
   build:
-    if: github.repository == 'apache/camel'
+    if: github.repository == 'smooks/smooks-fixed-length-cartridge'
     permissions:
       contents: write
       pull-requests: write
