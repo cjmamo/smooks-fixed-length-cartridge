@@ -34,3 +34,4 @@ jobs:
           branch: ref-latest-smooks-artifacts
           title: "Reference latest Smooks artifacts"
           reviewers: tfennelly,cjmamo
+          sign-commits: true
