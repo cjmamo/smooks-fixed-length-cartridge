@@ -38,7 +38,7 @@ jobs:
           branch: ref-latest-smooks-artifacts
           title: "Reference latest Smooks artifacts"
           body: |
-            Auto-generated pull request.
+            Auto-generated pull request :robot:
           reviewers: tfennelly
           assignees: cjmamo
           sign-commits: true
