@@ -12,7 +12,6 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-      actions: write
 
     runs-on: ubuntu-latest
     strategy:
@@ -31,7 +30,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           base: master
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT }}
           commit-message: "chore: reference latest Smooks artifacts"
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
