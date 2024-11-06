@@ -37,5 +37,8 @@ jobs:
           signoff: true
           branch: ref-latest-smooks-artifacts
           title: "Reference latest Smooks artifacts"
-          reviewers: tfennelly,cjmamo
+          body: |
+            Auto-generated pull request.
+          reviewers: tfennelly
+          assignees: cjmamo
           sign-commits: true
