@@ -23,10 +23,10 @@ jobs:
         with:
           persist-credentials: false
       - run: |
-          if mvn help:evaluate -Dexpression=project.version -q -DforceStdout | tail -1 | grep -q -- -SNAPSHOT ; then
+          if mvn help:evaluate -Dexpression=project.version -q -DforceStdout | tail -1 | grep -qv -- -SNAPSHOT ; then
             mvn -DgenerateBackupPoms=false -DnextSnapshot -DprocessAllModules=true versions:set
           fi
-          mvn versions:use-latest-snapshots -DgenerateBackupPoms=false -Dincludes=org.smooks*
+          mvn -DgenerateBackupPoms=false -Dincludes=org.smooks* versions:use-latest-snapshots
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
